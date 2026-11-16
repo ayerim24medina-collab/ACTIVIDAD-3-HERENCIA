@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Clase base (Superclase) que representa a un empleado general.
+ * Define los atributos y comportamientos comunes que serán heredados.
+ */
+class Empleado {
+    // Atributos protegidos para permitir el acceso desde las clases derivadas
+    protected string $nombre;
+    protected float $salarioBase;
+
+    public function __construct(string $nombre, float $salarioBase) {
+        $this->nombre = $nombre;
+        $this->salarioBase = $salarioBase;
+    }
+
+    // Método base que será heredado y sobrescrito por las subclases
+    public function calcularSalario(): float {
+        return $this->salarioBase;
+    }
+
+    // Método heredado que muestra los datos del empleado
+    public function mostrarInformacion(): void {
+        echo "Empleado: {$this->nombre} | Salario Total: $" . number_format($this->calcularSalario(), 2) . "<br>";
+    }
+}
