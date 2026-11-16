@@ -1,0 +1,17 @@
+# 1. Inicializar el repositorio local
+git init
+
+# 2. Agregar los archivos al área de preparación
+git add .
+
+# 3. Guardar los cambios iniciales (Commit)
+git commit -m "Commit inicial: Estructura base del proyecto"
+
+# 4. Asegurar que la rama principal se llame main
+git branch -M main
+
+# 5. Conectar tu carpeta local con el repositorio remoto de GitHub
+git remote add origin https://github.com
+
+# 6. Subir el código a la rama principal
+git push -u origin main
